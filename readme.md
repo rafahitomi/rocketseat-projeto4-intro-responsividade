@@ -18,3 +18,9 @@ Alguns conceitos aprendidos durante a aula:
 
 * HTML
 * CSS
+
+---
+
+## 📌 Link
+
+[Introdução à Responsividade](https://rocketseat-projeto4-intro-responsividade.vercel.app/) - Verifique no dispositivo móvel e desktop.
