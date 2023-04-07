@@ -1,0 +1,121 @@
+:root {
+  font-size: 62.5%; /* por padrão, os navegadores possuem 16px. Para facilitar a conversão para REM, vamos transformar 16px em 10px. Matematicamente, só é possível quando dividimos 10px em 16px = 0,625 ou 62.5% */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ECE9FD;
+  padding: 6.0rem 2.3rem 6.6rem;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 1.6rem;
+}
+
+.principal {
+  max-width: 33.0rem; /* largura máxima */
+  margin: 0 auto;
+}
+
+.principal p:first-child {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #7158EF;
+  margin-bottom: 1.7rem;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 4.0rem;
+  line-height: 4.8rem;
+  color: #090039;
+  margin-bottom: 1.5rem;
+}
+
+h1 + p { /* h1 anterior à p */
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  color: rgba(10, 0, 57, 0.64);
+  margin-bottom: 3.2rem;
+}
+
+a {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  color: #090039;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: 700;
+}
+
+ul {
+  margin-top: 7.2rem;
+  list-style: none;
+}
+
+ul li {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: #090039;
+
+  max-width: 25.7rem;
+  display: flex;
+  align-items: center;
+  gap: 3.8rem;
+}
+
+ul li + li { /* selecione todas as li que tem li anteriormente (para que o primeiro não seja selecionado) */
+  margin-top: 3.2rem;
+}
+
+ul li span {
+  font-weight: 800;
+  font-size: 7.2rem;
+  line-height: 8.0rem;
+  letter-spacing: -2px;
+  color: #090039;
+  min-width: 47px;
+}
+
+
+/* Media Queries */
+@media (min-width: 700px) { /* min-width -> de 'x' para cima, mude. max-width -> de 'x' para baixo, mude. */
+  body {
+    padding: 8.0rem;
+  }
+
+  .principal {
+    max-width: 1020px;
+    display: flex;
+    gap: 11.6rem;
+  }
+
+  .principal > div {
+    max-width: 484px;
+  }
+
+  h1 {
+    margin-bottom: 3.1rem;
+  }
+
+  h1 + p { /* h1 anterior à p */
+    margin-bottom: 2.8rem;
+  }
+
+  ul li {
+    max-width: 450px;
+    gap: 5.3rem;
+    align-items: center;
+  }
+}
