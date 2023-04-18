@@ -1,5 +1,5 @@
 :root {
-  font-size: 62.5%; /* por padrão, os navegadores possuem 16px. Para facilitar a conversão para REM, vamos transformar 16px em 10px. Matematicamente, só é possível quando dividimos 10px em 16px = 0,625 ou 62.5% */
+  font-size: 62.5%;
 }
 
 * {
@@ -16,13 +16,12 @@ body {
 }
 
 .principal {
-  max-width: 33.0rem; /* largura máxima */
+  max-width: 33.0rem;
   margin: 0 auto;
 }
 
-.principal p:first-child {
+.paragrafo__principal:first-child {
   font-weight: 400;
-  font-size: 1.6rem;
   line-height: 3.2rem;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -30,7 +29,7 @@ body {
   margin-bottom: 1.7rem;
 }
 
-h1 {
+.titulo__principal {
   font-weight: 800;
   font-size: 4.0rem;
   line-height: 4.8rem;
@@ -38,32 +37,30 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-h1 + p { /* h1 anterior à p */
+.titulo__principal + .paragrafo__principal {
   font-weight: 400;
-  font-size: 1.6rem;
   line-height: 3.2rem;
   color: rgba(10, 0, 57, 0.64);
   margin-bottom: 3.2rem;
 }
 
-a {
+.link {
   font-weight: 400;
-  font-size: 1.6rem;
   line-height: 3.2rem;
   color: #090039;
   text-decoration: none;
 }
 
-a:hover {
+.link:hover {
   font-weight: 700;
 }
 
-ul {
+.listas {
   margin-top: 7.2rem;
   list-style: none;
 }
 
-ul li {
+.item__lista {
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 3.2rem;
@@ -75,11 +72,7 @@ ul li {
   gap: 3.8rem;
 }
 
-ul li + li { /* selecione todas as li que tem li anteriormente (para que o primeiro não seja selecionado) */
-  margin-top: 3.2rem;
-}
-
-ul li span {
+.item__lista span {
   font-weight: 800;
   font-size: 7.2rem;
   line-height: 8.0rem;
@@ -88,32 +81,36 @@ ul li span {
   min-width: 47px;
 }
 
+.item__lista + .item__lista {
+  margin-top: 3.2rem;
+}
 
-/* Media Queries */
-@media (min-width: 700px) { /* min-width -> de 'x' para cima, mude. max-width -> de 'x' para baixo, mude. */
+
+/* RESPONSIVIDADE */
+@media (min-width: 700px) {
   body {
     padding: 8.0rem;
   }
-
+  
   .principal {
     max-width: 1020px;
     display: flex;
     gap: 11.6rem;
   }
-
+  
   .principal > div {
     max-width: 484px;
   }
-
-  h1 {
+  
+  .titulo__principal {
     margin-bottom: 3.1rem;
   }
-
-  h1 + p { /* h1 anterior à p */
+  
+  .titulo__principal + .paragrafo__principal {
     margin-bottom: 2.8rem;
   }
-
-  ul li {
+  
+  .item__lista {
     max-width: 450px;
     gap: 5.3rem;
     align-items: center;
